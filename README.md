@@ -5,6 +5,7 @@ The task alloted was to detect a swarm of omni-wheeled robots and estimate their
 
 1. Robot detection using Fiducial Markers
    > Each robot was marked with a fiducial marker and hence carried an unique identification number.
+   
    > The camera would process the input video into a stream of frames. Each frame had a distortion and to ensure minimal data loss, perspective transformation and smoothening was implemented. The         input frame was then corrected for its perspective and a straightened camera image was obtained.
 
       ![PT_Frame1](https://github.com/pradnyas5/Robot-Detection-System/assets/93536494/0a4a0d8d-c66d-41bf-ba2b-9efd3fb353ce)
