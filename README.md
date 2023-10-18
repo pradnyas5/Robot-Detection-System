@@ -1,39 +1,37 @@
 # Robot-Detection-System
-A "Pose-Estimation" project implemented using fiducial markers and YoloV5 object detection. 
+A "Pose-Estimation" project was implemented using fiducial markers and YoloV5 object detection. 
 The project was called "Project Dexter" and was associated with Technodune Pvt. Ltd.
-The task alloted was to detect a swarm of omni-wheeled robots and estimate their pose with respect to each other as well as with respect to the camera frame. This was done in following ways:
+The task allotted was to detect a swarm of omni-wheeled robots and estimate their pose with respect to each other as well as with respect to the camera frame. This was done in following ways:
 
-1. Robot detection using Fiducial Markers
+## 1. Robot detection using Fiducial Markers
    
-   > Each robot was marked with a fiducial marker and hence carried an unique identification number.
+   Each robot was marked with a fiducial marker and hence carried a unique identification number.
    
-   > The camera would process the input video into a stream of frames. Each frame had a distortion and to ensure minimal data loss, perspective transformation and smoothening was implemented. 
-     The input frame was then corrected for its perspective and a straightened camera image was obtained.
+   The camera would process the input video into a stream of frames. Each frame had a distortion and to ensure minimal data loss, perspective transformation and smoothening was implemented. 
+   The input frame was then corrected for its perspective and a straightened camera image was obtained.
 
-      Distorted Image
+  
 
-      ![PT_Frame1](https://github.com/pradnyas5/Robot-Detection-System/assets/93536494/0a4a0d8d-c66d-41bf-ba2b-9efd3fb353ce)
+   ![PT_Frame1](https://github.com/pradnyas5/Robot-Detection-System/assets/93536494/0a4a0d8d-c66d-41bf-ba2b-9efd3fb353ce)   
+   *Distorted Image*
+
+   ![PT_Frame2](https://github.com/pradnyas5/Robot-Detection-System/assets/93536494/597b092b-a84c-4474-96c8-886e2d0077c2)   
+   *Straightened Image*   
       
-      Straightened Image
+   ![SAVE](https://github.com/pradnyas5/Robot-Detection-System/assets/93536494/9da9965e-40d7-4489-b367-8e737588e4ec)   
+   *Robot Pose Estimation*
 
-      ![PT_Frame2](https://github.com/pradnyas5/Robot-Detection-System/assets/93536494/597b092b-a84c-4474-96c8-886e2d0077c2)
-      
-      Robot Pose Estimation
-
-      ![SAVE](https://github.com/pradnyas5/Robot-Detection-System/assets/93536494/9da9965e-40d7-4489-b367-8e737588e4ec)
-
-
-3. Robot detection using YoloV5
+## 2. Robot detection using YoloV5
    
-   > Implemented "Transfer Learning" to train a model using YoloV5.
+   Implemented "Transfer Learning" to train a model using YoloV5.
 
-   > Achieved an accuracy of 85-90 % in Robot detection.
+   Achieved an accuracy of 85-90 % in Robot detection.
    
-      ![RD_1](https://github.com/pradnyas5/Robot-Detection-System/assets/93536494/31f48f02-e775-4082-90b8-4850eef258a8)
+   ![RD_1](https://github.com/pradnyas5/Robot-Detection-System/assets/93536494/31f48f02-e775-4082-90b8-4850eef258a8)
       
-      ![RD_2](https://github.com/pradnyas5/Robot-Detection-System/assets/93536494/0e2c2363-8f45-4ba7-9e2b-d6842fb9b9e8)
+   ![RD_2](https://github.com/pradnyas5/Robot-Detection-System/assets/93536494/0e2c2363-8f45-4ba7-9e2b-d6842fb9b9e8)
 
-The robot kinematics for holonomic motion were implementing using C langauge. The conrtoller responsible for control of robot movement was ESP32S. Following is a glimpse of Robot movement:
+   The robot kinematics for the holonomic motion were implemented using C language. The controller responsible for the control of robot movement was ESP32S. Following is a glimpse of Robot movement:
 
    https://github.com/pradnyas5/Robot-Detection-System/assets/93536494/ac979192-d204-410c-ac2a-0f6174018360
 
